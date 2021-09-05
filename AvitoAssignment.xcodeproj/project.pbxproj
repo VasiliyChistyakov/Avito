@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3363B79F26E42393003CE728 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3363B79E26E42393003CE728 /* ViewController.swift */; };
 		336F54DF26DAEF3B00FB4C81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336F54DE26DAEF3B00FB4C81 /* AppDelegate.swift */; };
 		336F54E126DAEF3B00FB4C81 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336F54E026DAEF3B00FB4C81 /* SceneDelegate.swift */; };
 		336F54E626DAEF3B00FB4C81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 336F54E426DAEF3B00FB4C81 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3363B79E26E42393003CE728 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		336F54DB26DAEF3B00FB4C81 /* AvitoAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AvitoAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		336F54DE26DAEF3B00FB4C81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		336F54E026DAEF3B00FB4C81 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 			children = (
 				336F54DE26DAEF3B00FB4C81 /* AppDelegate.swift */,
 				336F54E026DAEF3B00FB4C81 /* SceneDelegate.swift */,
+				3363B79E26E42393003CE728 /* ViewController.swift */,
 				336F550426DC1FA600FB4C81 /* TableViewController.swift */,
 				33BD543D26E38A5A002433D1 /* NetworkingManager.swift */,
 				336F54F626DAF07400FB4C81 /* Model.swift */,
@@ -205,6 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3363B79F26E42393003CE728 /* ViewController.swift in Sources */,
 				336F54F726DAF07400FB4C81 /* Model.swift in Sources */,
 				336F54DF26DAEF3B00FB4C81 /* AppDelegate.swift in Sources */,
 				336F550526DC1FA600FB4C81 /* TableViewController.swift in Sources */,

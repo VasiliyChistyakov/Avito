@@ -25,26 +25,20 @@ class TableViewController: UITableViewController {
     
     // MARK: - Table view data source
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return employeesArray?.company.employees.count ?? 0
-    }
-    
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        employeesArray.company.employees[section].name
-    }
-    
-    
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        return employeesArray?.company.employees.count ?? 0
+//    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return employeesArray.company.employees[section].skills.count
+        return employeesArray?.company.employees.count ?? 0
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
-        cell.textLabel?.text = employeesArray.company.employees[indexPath.section].skills[indexPath.row].debugDescription
+        cell.textLabel?.text = employeesArray.company.employees[indexPath.row].name
         
         return cell
     }
