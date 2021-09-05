@@ -38,6 +38,7 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
+        print(indexPath.row)
         cell.textLabel?.text = employeesArray.company.employees[indexPath.row].name
         
         return cell

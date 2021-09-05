@@ -17,18 +17,4 @@ class AvitoAssignmentTests: XCTestCase {
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-    
-    func testUrlSession() {
-        let sut = NetwokingManager()
-        
-        var fetchRequest = sut.fetchRequest { avito in
-           let employees = avito.company.employees
-        }
-        
-        
-        
-        
-    }
-
-
 }

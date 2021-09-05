@@ -51,27 +51,27 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="krq-hk-cIR">
                                 <rect key="frame" x="87" y="164" width="240" height="240"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="240" id="MZk-g6-JeQ"/>
-                                    <constraint firstAttribute="width" constant="240" id="tYN-B4-ccf"/>
+                                    <constraint firstAttribute="height" constant="240" id="iJO-41-0BW"/>
+                                    <constraint firstAttribute="width" constant="240" id="yjh-sk-CNZ"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="edx-X0-nni">
-                                <rect key="frame" x="185" y="435" width="48.5" height="77.5"/>
+                                <rect key="frame" x="160" y="435" width="94" height="77.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jty-b3-Lzw">
-                                        <rect key="frame" x="0.0" y="0.0" width="48.5" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="94" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dre-JV-Qrr">
-                                        <rect key="frame" x="0.0" y="28.5" width="48.5" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="28.5" width="94" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skills" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0x-J8-SUF">
-                                        <rect key="frame" x="0.0" y="57" width="48.5" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="57" width="94" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -82,16 +82,19 @@
                         <viewLayoutGuide key="safeArea" id="CTa-z6-S3k"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="CTa-z6-S3k" firstAttribute="trailing" secondItem="krq-hk-cIR" secondAttribute="trailing" constant="87" id="KQf-jW-Pi2"/>
-                            <constraint firstItem="krq-hk-cIR" firstAttribute="top" secondItem="CTa-z6-S3k" secondAttribute="top" constant="76" id="qS7-tp-LHc"/>
-                            <constraint firstItem="krq-hk-cIR" firstAttribute="leading" secondItem="CTa-z6-S3k" secondAttribute="leading" constant="87" id="s5h-0d-6H6"/>
-                            <constraint firstItem="edx-X0-nni" firstAttribute="leading" secondItem="krq-hk-cIR" secondAttribute="trailing" constant="-142" id="wqB-v5-uDu"/>
-                            <constraint firstItem="edx-X0-nni" firstAttribute="top" secondItem="krq-hk-cIR" secondAttribute="bottom" constant="31" id="xXN-f9-VeY"/>
+                            <constraint firstItem="CTa-z6-S3k" firstAttribute="trailing" secondItem="edx-X0-nni" secondAttribute="trailing" constant="160" id="NHM-HV-S3q"/>
+                            <constraint firstItem="CTa-z6-S3k" firstAttribute="trailing" secondItem="krq-hk-cIR" secondAttribute="trailing" constant="87" id="Yy7-gR-6jP"/>
+                            <constraint firstItem="krq-hk-cIR" firstAttribute="leading" secondItem="CTa-z6-S3k" secondAttribute="leading" constant="87" id="fCI-Tu-HjX"/>
+                            <constraint firstItem="krq-hk-cIR" firstAttribute="top" secondItem="CTa-z6-S3k" secondAttribute="top" constant="76" id="sl6-6k-Rpz"/>
+                            <constraint firstItem="edx-X0-nni" firstAttribute="leading" secondItem="CTa-z6-S3k" secondAttribute="leading" constant="160" id="uta-of-Ohq"/>
+                            <constraint firstItem="edx-X0-nni" firstAttribute="top" secondItem="krq-hk-cIR" secondAttribute="bottom" constant="31" id="wuw-xx-T3A"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="JbX-hU-HgM"/>
                     <connections>
-                        <outlet property="label" destination="jty-b3-Lzw" id="ppF-zV-0wJ"/>
+                        <outlet property="nameLabel" destination="jty-b3-Lzw" id="in2-nf-1Ba"/>
+                        <outlet property="phoneLabel" destination="dre-JV-Qrr" id="AY1-KW-LEm"/>
+                        <outlet property="skillsLabel" destination="c0x-J8-SUF" id="ntq-vI-7yR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uxx-8A-QtJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

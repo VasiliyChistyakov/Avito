@@ -9,11 +9,22 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var label: UILabel!
+
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var phoneLabel: UILabel!
+    @IBOutlet weak var skillsLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        NetworkingManager.shared.fetchData { model in
+            DispatchQueue.main.async {
+                self.nameLabel.text = model.company.employees[0].name
+                self.phoneLabel.text = "phone \(model.company.employees[0].phone_number)"
+                self.skillsLabel.text = model.company.employees[0].skills[0]
+                
+            }
+        }
         
     }
     
