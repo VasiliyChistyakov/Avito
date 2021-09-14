@@ -13,7 +13,6 @@ class TableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         NetworkingManager.shared.fetchData { [weak self] model in
             DispatchQueue.main.async {
                 self?.employeesArray = model
@@ -22,12 +21,11 @@ class TableViewController: UITableViewController {
         }
     }
     
-    
     // MARK: - Table view data source
     
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//        return employeesArray?.company.employees.count ?? 0
-//    }
+    //    override func numberOfSections(in tableView: UITableView) -> Int {
+    //        return employeesArray?.company.employees.count ?? 0
+    //    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
@@ -37,11 +35,31 @@ class TableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        
-        print(indexPath.row)
         cell.textLabel?.text = employeesArray.company.employees[indexPath.row].name
-        
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let section = employeesArray.company.employees[indexPath.row]
+        
+        let alert = UIAlertController(title: section.phone_number, message: section.skills.description, preferredStyle: .actionSheet)
+        let profileAction = UIAlertAction(title: "Профиль", style: .default) { (alert) in
+            self.performSegue(withIdentifier: "EmployeeVc", sender: indexPath)
+        }
+        let okAction = UIAlertAction(title: "Ok", style: .default) { _ in }
+        alert.addAction(okAction)
+        alert.addAction(profileAction)
+        present(alert, animated: true, completion: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "EmployeeVc" {
+            let vc = segue.destination as! EmployeesViewController
+            let indexPath = sender as! IndexPath
+            
+            let employee = employeesArray.company.employees[indexPath.row]
+            vc.employee = employee
+        }
     }
     
     

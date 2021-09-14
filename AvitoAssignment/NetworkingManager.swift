@@ -27,7 +27,6 @@ class NetworkingManager {
             } catch let error as NSError {
                 print(error.localizedDescription)
             }
-            
         }.resume()
     }
 }
