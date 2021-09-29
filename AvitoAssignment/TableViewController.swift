@@ -23,10 +23,6 @@ class TableViewController: UITableViewController {
     
     // MARK: - Table view data source
     
-    //    override func numberOfSections(in tableView: UITableView) -> Int {
-    //        return employeesArray?.company.employees.count ?? 0
-    //    }
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return employeesArray?.company.employees.count ?? 0
