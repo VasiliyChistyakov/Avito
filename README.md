@@ -7,7 +7,6 @@
 - JSON
 - UITableView
 - Closures
-- MVVM
 
 
 <img src="https://user-images.githubusercontent.com/81886542/133327909-397d2b91-0748-4b57-9990-b86d526f670c.png" width="300" />
